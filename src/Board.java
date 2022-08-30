@@ -29,6 +29,14 @@ public class Board {
                     board[tempPosition] = new Rook(tempPosition, false);
                     tempPosition++;
                 }
+                case 'N' -> {
+                    board[tempPosition] = new Knight(tempPosition, true);
+                    tempPosition++;
+                }
+                case 'n' -> {
+                    board[tempPosition] = new Knight(tempPosition, false);
+                    tempPosition++;
+                }
 
             }
 
