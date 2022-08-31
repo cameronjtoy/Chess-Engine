@@ -1,10 +1,15 @@
-public class Queen extends Piece{
+package Pieces;
+
+import Game.*;
+
+public class Pawn extends Piece {
     int coordinate;
     boolean isWhite;
+    boolean firstMove;
     int[] availableMoves;
     private final static int[] CANDIDATE_MOVE_COORDINATES = {8, 16, 7, 9};
 
-    public Queen(int coordinate, boolean isWhite){
+    public Pawn(int coordinate, boolean isWhite){
         this.coordinate = coordinate;
         this.isWhite = isWhite;
     }

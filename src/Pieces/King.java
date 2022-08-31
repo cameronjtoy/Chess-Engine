@@ -1,6 +1,11 @@
-public class King extends Piece{
+package Pieces;
+
+import Game.*;
+
+public class King extends Piece {
     int coordinate;
     boolean isWhite;
+    boolean firstMove;
     int[] availableMoves;
     private final static int[] CANDIDATE_MOVE_COORDINATES = {8, 16, 7, 9};
 
