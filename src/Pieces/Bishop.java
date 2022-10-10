@@ -1,29 +1,17 @@
 package Pieces;
 
-import Game.*;
+import java.util.*;
+import BoardGame.*;
 
 public class Bishop extends Piece {
-    int coordinate;
+    static int coordinate;
     boolean isWhite;
     boolean firstMove;
-    int[] availableMoves;
-    private final static int[] CANDIDATE_MOVE_COORDINATES = {8, 16, 7, 9};
+    static ArrayList<String> availableMoves;
+    public final static int[] CANDIDATE_MOVE_COORDINATES = {-9, -7, 7, 9};
 
     public Bishop(int coordinate, boolean isWhite){
-        this.coordinate = coordinate;
+        Bishop.coordinate = coordinate;
         this.isWhite = isWhite;
     }
-
-    public static void generateLegalMoves(Board board){
-
-
-
-
-
-
-    }
-
-
-
-
 }

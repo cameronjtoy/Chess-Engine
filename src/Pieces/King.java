@@ -1,26 +1,29 @@
 package Pieces;
 
-import Game.*;
+import BoardGame.*;
+
+import java.util.ArrayList;
 
 public class King extends Piece {
-    int coordinate;
+    static int coordinate;
     boolean isWhite;
     boolean firstMove;
-    int[] availableMoves;
-    private final static int[] CANDIDATE_MOVE_COORDINATES = {8, 16, 7, 9};
+    static ArrayList<String> availableMoves;
+    boolean canCastle;
+    public final static int[] CANDIDATE_MOVE_COORDINATES = {-7, -9, 7, 9};
 
     public King(int coordinate, boolean isWhite){
-        this.coordinate = coordinate;
+        King.coordinate = coordinate;
         this.isWhite = isWhite;
     }
 
     public static void generateLegalMoves(Board board){
-
-
-
-
-
-
+        for(int direction: CANDIDATE_MOVE_COORDINATES){
+            int tempPosition = coordinate;
+            if(tempPosition + direction > 0 && tempPosition + direction < 63 && board.getPiece(tempPosition + direction) != null){
+                availableMoves.add("B"+board.getPositionFromCoordinate(tempPosition + direction));
+            }
+        }
     }
 
 
